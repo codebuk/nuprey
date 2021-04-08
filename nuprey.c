@@ -5,12 +5,6 @@
  */
 
 
-
-
-
-
-
-
 #include "pico/stdlib.h"
 #include "hardware/uart.h"
 #include "hardware/irq.h"
@@ -46,8 +40,9 @@ void on_uart_rx() {
 }
 
 int main() {
+
     // Set up our UART with a basic baud rate.
-    uart_init(UART_ID, 2400);
+    uart_init(UART_ID, 112600);
 
     // Set the TX and RX pins by using the function select on the GPIO
     // Set datasheet for more information on function select
